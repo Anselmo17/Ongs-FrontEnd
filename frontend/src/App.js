@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './global.css';
 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>OI</h1>
-      </div>
-    );
-  }
+import Logon from './pages/Logon/index';
+
+
+function App() {
+  return (
+    <Logon />
+  );
 }
 
 export default App;
