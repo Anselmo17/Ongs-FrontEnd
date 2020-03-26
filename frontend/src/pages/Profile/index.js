@@ -71,6 +71,36 @@ export default function Register() {
             <FiTrash2 size={20} color="#a8a8b3"/>
           </button>
         </li>
+
+        <li>
+          <strong>Caso</strong>
+          <p>Caso teste</p>
+
+          <strong>Descricões</strong>
+          <p>Descricao teste</p>
+
+          <strong>Valor:</strong>
+          <p>R$ 120,00</p>
+
+          <button type="button">
+            <FiTrash2 size={20} color="#a8a8b3"/>
+          </button>
+        </li>
+
+        <li>
+          <strong>Caso</strong>
+          <p>Caso teste</p>
+
+          <strong>Descricões</strong>
+          <p>Descricao teste</p>
+
+          <strong>Valor:</strong>
+          <p>R$ 120,00</p>
+
+          <button type="button">
+            <FiTrash2 size={20} color="#a8a8b3"/>
+          </button>
+        </li>
       </ul>
     </div>
   )
