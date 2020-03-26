@@ -24,7 +24,6 @@ export default function Profile() {
   const ongName = localStorage.getItem('ongName');
   const ongId = localStorage.getItem('ongId')
 
-  // funcoes
 
   // executa toda vez q chama a page
   useEffect(() => {
@@ -44,6 +43,16 @@ export default function Profile() {
 
   }, [ongId]);
 
+
+
+  function handleLogout() {
+    // remove data localStorage
+    localStorage.clear();
+
+    // redirect
+    history.push('/');
+  }
+
   async function handleDeleteIncident(id) {
     try {
       await api.delete(`incidents/${id}`, {
@@ -61,7 +70,7 @@ export default function Profile() {
     }
   }
 
-  
+
   return (
     <div className="profile-container">
       <header>
@@ -69,11 +78,13 @@ export default function Profile() {
         <span>Bem vindo, {ongName}</span>
 
         <Link className="button" to="/incident/new" >Cadastrar novo caso</Link>
-        <button type="button">
+        
+        <button type="button" onClick={handleLogout}>
           <FiPower size={18} color="#E02041" />
         </button>
       </header>
 
+      {/* lista de cadastros */}
       <h1>Casos cadastrados</h1>
       <ul>
         {
