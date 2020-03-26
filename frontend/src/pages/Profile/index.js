@@ -14,7 +14,7 @@ import api from '../../services/api';
 
 export default function Profile() {
 
-  // redirect
+  // redirect page
   const history = useHistory();
 
   //variables state
@@ -42,7 +42,6 @@ export default function Profile() {
       })
 
   }, [ongId]);
-
 
 
   function handleLogout() {
